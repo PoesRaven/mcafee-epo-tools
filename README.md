@@ -27,5 +27,5 @@ Arguments:
 ### Installation
 - Ensure you have python v2.7
 - Download mcafee.py and apply_tag.py to the same directory
-- Ensure you have a working systems file that correlate to the systems in epo
+- Ensure you have a working "systems" file that correlate to the systems in epo
 - Run apply_tag.py
