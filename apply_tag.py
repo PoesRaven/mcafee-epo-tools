@@ -52,14 +52,25 @@ def main(epo_host, epo_port, epo_un, epo_pw, set_tag, system_file, verbose):
 
     # Apply the tag for each system in file
     systems_updated = 0
+    system_count = 0
     for this_system in this_file:
         epo_system = this_system.rstrip('\n')
         if verbose:
             print("Applying tag: {} to system: {}".format(set_tag, epo_system))
-        mc.system.applyTag(epo_system, set_tag)
-        systems_updated += 1
 
-    print("Successfully added tag: {} to {} systems".format(set_tag, systems_updated))
+        change_result = mc.system.applyTag(epo_system, set_tag)
+
+        if change_result == 1:
+            if verbose:
+                print("Applying tag: {} to system: {}".format(set_tag, epo_system))
+            systems_updated += 1
+        else:
+            print("Failed to apply tag: {} to system: {}".format(set_tag, epo_system))
+            print("Perhaps the system already has the tag or the system was not found in ePO")
+
+        system_count += 1
+
+    print("Successfully added tag: {} to {}/{} systems".format(set_tag, systems_updated, system_count))
 
 if __name__ == "__main__":
 
