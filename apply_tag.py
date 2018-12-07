@@ -48,6 +48,7 @@ def main(epo_host, epo_port, epo_un, epo_pw, set_tag, system_file, verbose):
         this_file = open(system_file, 'r')
     except e:
         print("Failed to read system file. Perhaps the location or file name is incorrect?")
+        exit()
 
 
     # Apply the tag for each system in file
