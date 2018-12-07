@@ -12,7 +12,7 @@ Usage: `python apply_tag.py [-h] --host HOST [--port PORT] --un UN --pw PW --fil
 Update systems in ePO with given tag
 
 Arguments:
-  -h, --help   show this help message and exit
+   -h, --help   show this help message and exit
   --host HOST  ePO FQDN or IP Address
   --port PORT  ePO port
   --un UN      ePO username with authorization to access API. This must be a
@@ -26,6 +26,6 @@ Arguments:
                
 ### Installation
 - Ensure you have python v2.7
-- Download mcafee.py and apply_tag.py to the same directory
+- Download mcafee.py, urlquote.py (if the urlquote library is not installed), and apply_tag.py to the same directory
 - Ensure you have a working "systems" file that correlate to the systems in epo
 - Run apply_tag.py
