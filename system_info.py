@@ -1,7 +1,7 @@
 """
 Description: system_info.py is used to pull system information about an asset within ePO
 
-usage: apply_tag.py [-h] --host HOST [--port PORT] --un UN --pw PW [--file FILE]
+usage: system_info.py [-h] --host HOST [--port PORT] --un UN --pw PW [--file FILE]
 
 Display information about a given system
 
@@ -12,7 +12,7 @@ optional arguments:
   --un UN      ePO username with authorization to access API. This must be a
                superuser
   --pw PW      ePO password
-  --file FILE  The file containing the system names to be updated
+  --file FILE  The file containing the system names to be found
   -v           Verbose output. This will notify you of every system which is
                being updated.
 
