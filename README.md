@@ -51,6 +51,6 @@ Arguments:
                
 ### Installation
 - Ensure you have python v2.7
-- Download mcafee.py, urlquote.py (if the urlquote library is not installed), and apply_tag.py to the same directory
+- Download mcafee.py, urlquote.py (if the urlquote library is not installed), and system_info.py to the same directory
 - Ensure you have a working "systems" file that correlate to the systems in epo
 - Run system_info.py
