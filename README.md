@@ -66,6 +66,39 @@ optional arguments:
 - pip3 install selenium
 - Run ens_ep.py
 
+### Example
+```
+python3 ens_ep.py --epo "https://win2016-epo.jnetzlab.loc:8443" --user "epadd" --pass "abcd1234" --policy "My Default" --name "Stop CMD" --sev 3 --rule_type ENS_Files --rule '    Rule {
+Process {
+Include OBJECT_NAME { -v cmd.exe  }
+}
+Target {
+Match FILE {
+Include OBJECT_NAME {
+-v "c:\\temp\\*test.txt"
+}
+   Include -access "CREATE"
+}}' --notes "this is a note" --debug
+-------
+
+Connecting to the ePO
+Logging into ePO
+Navigating to Policy Catalog
+Opening the ENS Threat Prevention Policies
+Opening My Default Exploit Prevention policy
+Showing Advanced options
+Adding expert rule
+Adding name to the Expert Rule
+Setting the severity for the Expert Rule
+Setting the Action for the Expert Rule
+Setting the rule type for the Expert Rule
+Setting the signature content for the Expert Rule
+Setting the notes for the Expert Rule
+Saving the Expert Rule
+Saving the Exploit Prevention policy
+Closing the browser
+```
+
 ## system_info.py
 system_info.py is used to pull system information about an asset within ePO
 
