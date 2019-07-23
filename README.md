@@ -68,7 +68,8 @@ optional arguments:
 
 ### Example
 ```
-python3 ens_ep.py --epo "https://win2016-epo.jnetzlab.loc:8443" --user "epadd" --pass "abcd1234" --policy "My Default" --name "Stop CMD" --sev 3 --rule_type ENS_Files --rule '    Rule {
+python3 ens_ep.py --epo "https://epo.epotest.loc:8443" --user "epadd" --pass "abcd1234" --policy "My Default" --name 
+"Stop CMD" --sev 3 --rule_type ENS_Files --rule '    Rule {
 Process {
 Include OBJECT_NAME { -v cmd.exe  }
 }
