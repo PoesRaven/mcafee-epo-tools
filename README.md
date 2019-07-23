@@ -10,7 +10,7 @@ Usage: `python apply_tag.py [-h] --host HOST [--port PORT] --un UN --pw PW --fil
                     --tag TAG [-v]`
 
 Update systems in ePO with given tag
-
+```
 Arguments:
    -h, --help   show this help message and exit
   --host HOST  ePO FQDN or IP Address
@@ -23,7 +23,7 @@ Arguments:
                already exist in the tag catalog
   -v           Verbose output. This will notify you of every system which is
                being updated.
-               
+```               
 ### Installation
 - Ensure you have python v2.7
 - Download mcafee.py, urlquote.py (if the urlquote library is not installed), and apply_tag.py to the same directory
@@ -41,7 +41,7 @@ usage: `ens_ep.py [-h] --epo EPO --user USER --password PASSWORD --policy
                  --rule RULE [--notes NOTES] [--debug]`
 
 Dynamically add an expert rule to a specified policy.
-
+```
 optional arguments:
   -h, --help            show this help message and exit
   --epo EPO             The url of the epo: https://eposerver.epo:8443
@@ -57,7 +57,7 @@ optional arguments:
   --rule RULE           The Expert Rule
   --notes NOTES         Any additional notes you want to add to the rule
   --debug               print debug messages to stderr
-
+```
 ### Installation
 - Ensure you have python v3.5+
 - Download ens_ep.py
@@ -73,7 +73,7 @@ Usage: `python system_info.py [-h] --host HOST [--port PORT] --un UN --pw PW --f
                     [-v]`
 
 Display information about a given system
-
+```
 Arguments:
    -h, --help   show this help message and exit
   --host HOST  ePO FQDN or IP Address
@@ -84,7 +84,7 @@ Arguments:
   --file FILE  The file containing the system names to be found
   -v           Verbose output. This will notify you of every system which is
                being updated.
-               
+```      
 ### Installation
 - Ensure you have python v2.7
 - Download mcafee.py, urlquote.py (if the urlquote library is not installed), and system_info.py to the same directory
