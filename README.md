@@ -30,6 +30,41 @@ Arguments:
 - Ensure you have a working "systems" file that correlate to the systems in epo
 - Run apply_tag.py
 
+## ens_ep.py
+ens_ep.py is used to dynamically add an Expert Rule to an Exploit Prevention policy of your choosing. This is not a 
+capability of the McAfee ePO. Therefore, this script uses Selenium web scraping to achieve this task.
+
+usage: `ens_ep.py [-h] --epo EPO --user USER --password PASSWORD --policy
+                 POLICY --name NAME [--sev {1,2,3,4}]
+                 [--action {Block,Report} [{Block,Report} ...]] --rule_type
+                 {Buffer_Overflow,Illegal_API_Use,ENS_Files,Services,ENS_Registry,ENS_Process}
+                 --rule RULE [--notes NOTES] [--debug]`
+
+Dynamically add an expert rule to a specified policy.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --epo EPO             The url of the epo: https://eposerver.epo:8443
+  --user USER           Username to log into ePO
+  --password PASSWORD   Password for the ePO account
+  --policy POLICY       The policy to which you want to add the Expert Rule
+  --name NAME           Name of the expert rule
+  --sev {1,2,3,4}       Severity of the expert rule
+  --action {Block,Report} [{Block,Report} ...]
+                        When triggered, should it block or report
+  --rule_type {Buffer_Overflow,Illegal_API_Use,ENS_Files,Services,ENS_Registry,ENS_Process}
+                        What kind of rule is this?
+  --rule RULE           The Expert Rule
+  --notes NOTES         Any additional notes you want to add to the rule
+  --debug               print debug messages to stderr
+
+### Installation
+- Ensure you have python v3.5+
+- Download ens_ep.py
+- Download chromedriver as a headless driver for the webkit
+- pip3 install selenium
+- Run ens_ep.py
+
 ## system_info.py
 system_info.py is used to pull system information about an asset within ePO
 
