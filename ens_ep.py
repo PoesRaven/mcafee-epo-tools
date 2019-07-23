@@ -104,7 +104,6 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
     if debug: driver.save_screenshot("add_er.png")
     time.sleep(1)
 
-
     print("Adding name to the Expert Rule")
     input_name = driver.find_element_by_xpath('//*[@id="textboxID_ExpertRuleName"]')
     input_name.send_keys(expert_rule['name'])
