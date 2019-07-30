@@ -41,7 +41,7 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
     print("Connecting to the ePO")
     driver.get(epo_url)
 
-    if debug: driver.save_screenshot("login.png")
+    if debug: driver.save_screenshot("1_login.png")
     time.sleep(1)
     # Enter some text!
 
@@ -60,7 +60,7 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
     time.sleep(1)
 
     print("Navigating to Policy Catalog")
-    if debug: driver.save_screenshot("dashboard.png")
+    if debug: driver.save_screenshot("2_dashboard.png")
 
     menu = driver.find_element_by_xpath('//*[@id="mfsLauncher"]')
     menu.click()
@@ -68,7 +68,7 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
 
     policycatalog = driver.find_element_by_xpath('//*[@title="Policy Catalog"]')
     policycatalog.click()
-    if debug: driver.save_screenshot("policycatalog.png")
+    if debug: driver.save_screenshot("3_policycatalog.png")
 
     time.sleep(1)
 
@@ -78,14 +78,14 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
     policySettingOption.click()
     driver.execute_script("fnReloadCatalogPage();")
 
-    if debug: driver.save_screenshot("policycatalog2.png")
+    if debug: driver.save_screenshot("4_policycatalog2.png")
     time.sleep(1)
 
     print("Opening {} Exploit Prevention policy".format(policy))
     policySelect = driver.find_element_by_xpath('//div[text()="Exploit Prevention"]/../../td[1]/div/span/a[text()'
                                                 '="{}"]'.format(policy))
     policySelect.click()
-    if debug: driver.save_screenshot("ep.png")
+    if debug: driver.save_screenshot("5_ep.png")
     time.sleep(1)
 
     print("Showing Advanced options")
@@ -94,14 +94,14 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
     if showAdvanced.get_attribute('value') == "Show Advanced":
         showAdvanced.click()
 
-    if debug: driver.save_screenshot("ep_adv.png")
+    if debug: driver.save_screenshot("6_ep_adv.png")
     time.sleep(1)
 
     print("Adding expert rule")
     addExpertRule = driver.find_element_by_xpath('//*[@id="addExpertRules"]')
     addExpertRule.click()
 
-    if debug: driver.save_screenshot("add_er.png")
+    if debug: driver.save_screenshot("7_add_er.png")
     time.sleep(1)
 
     print("Adding name to the Expert Rule")
@@ -149,23 +149,23 @@ def add_expert_rule(epo_url, epo_un, epo_pw, policy, expert_rule, debug=False):
         input_notes.click()  # We need to click
         input_notes.send_keys(expert_rule['notes'])
 
-    if debug: driver.save_screenshot('er_unsaved.png')
+    if debug: driver.save_screenshot('8_er_unsaved.png')
 
     print("Saving the Expert Rule")
     save_button = driver.find_element_by_xpath('//*[@id="saveButton"]')
     save_button.click()
 
-    if debug: driver.save_screenshot('er_saved.png')
+    if debug: driver.save_screenshot('9_er_saved.png')
 
     time.sleep(10)
     print("Saving the Exploit Prevention policy")
     save_button = driver.find_element_by_xpath('//*[@id="obID_Apply"]')
     save_button.click()
-    if debug: driver.save_screenshot('ep_saved.png')
+    if debug: driver.save_screenshot('10_ep_saved.png')
 
 
     time.sleep(5)
-    if debug: driver.save_screenshot("finished.png")
+    if debug: driver.save_screenshot("11_finished.png")
 
     print("Closing the browser")
     # Close the browser!
