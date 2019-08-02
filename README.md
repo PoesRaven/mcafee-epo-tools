@@ -63,6 +63,7 @@ optional arguments:
 - Download ens_ep.py
 - SUPPORTS ePO 5.9 ONLY!
 - Download chromedriver as a headless driver for the webkit
+- Ensure Chrome is installed
 - pip3 install selenium
 - Run ens_ep.py
 
