@@ -32,7 +32,7 @@ Arguments:
 
 ## ens_ep.py
 ens_ep.py is used to dynamically add an Expert Rule to an Exploit Prevention policy of your choosing. This is not a 
-capability of the McAfee ePO. Therefore, this script uses Selenium web scraping to achieve this task.
+capability of the McAfee ePO API. Therefore, this script uses Selenium web scraping to achieve this task.
 
 usage: `ens_ep.py [-h] --epo EPO --user USER --password PASSWORD --policy
                  POLICY --name NAME [--sev {1,2,3,4}]
